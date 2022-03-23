@@ -1,0 +1,15 @@
+current directory: /home/concertcare-219/Desktop/working/test_case/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.11.1/ext/bootsnap
+/home/concertcare-219/.rvm/rubies/ruby-2.7.3/bin/ruby -I /home/concertcare-219/.rvm/rubies/ruby-2.7.3/lib/ruby/2.7.0 -r ./siteconf20220321-5552-15zkoyw.rb extconf.rb
+creating Makefile
+
+current directory: /home/concertcare-219/Desktop/working/test_case/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.11.1/ext/bootsnap
+make "DESTDIR=" clean
+
+current directory: /home/concertcare-219/Desktop/working/test_case/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.11.1/ext/bootsnap
+make "DESTDIR="
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.so
+
+current directory: /home/concertcare-219/Desktop/working/test_case/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.11.1/ext/bootsnap
+make "DESTDIR=" install
+/usr/bin/install -m 0755 bootsnap.so ./.gem.20220321-5552-1nhxkpl/bootsnap

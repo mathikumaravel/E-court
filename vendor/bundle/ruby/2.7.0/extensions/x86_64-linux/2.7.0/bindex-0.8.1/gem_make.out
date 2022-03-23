@@ -1,0 +1,15 @@
+current directory: /home/concertcare-219/Desktop/working/test_case/vendor/bundle/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
+/home/concertcare-219/.rvm/rubies/ruby-2.7.3/bin/ruby -I /home/concertcare-219/.rvm/rubies/ruby-2.7.3/lib/ruby/2.7.0 -r ./siteconf20220321-5552-1hx2o0k.rb extconf.rb
+creating Makefile
+
+current directory: /home/concertcare-219/Desktop/working/test_case/vendor/bundle/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" clean
+
+current directory: /home/concertcare-219/Desktop/working/test_case/vendor/bundle/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR="
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.so
+
+current directory: /home/concertcare-219/Desktop/working/test_case/vendor/bundle/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" install
+/usr/bin/install -m 0755 cruby.so ./.gem.20220321-5552-12tahp/skiptrace/internal

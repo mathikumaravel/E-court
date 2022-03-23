@@ -1,0 +1,77 @@
+<%= form_with(model: case_info) do |form| %>
+  <% if case_info.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(case_info.errors.count, "error") %> prohibited this case_info from being saved:</h2>
+
+      <ul>
+        <% case_info.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-row">
+  <div class="col-md-4 mb-3">
+    <%= form.label :case_category %>
+    <%= form.text_field :case_category, class: "form-control" %>
+  </div>
+
+  <div class="col-md-4 mb-3">
+    <%= form.label :court_name %>
+    <%= form.text_field :court_name, class: "form-control" %>
+  </div>
+
+  <div class="col-md-4 mb-3">
+    <%= form.label :judge_name%>
+    <%= form.text_field :judge_name, class: "form-control" %>
+  </div>
+  </div>
+  <div class="mb-3">
+    <%= form.label :registration_number %>
+    <%= form.text_field :registration_number, class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :case_stage %>
+    <%= form.text_field :case_stage, class: "form-control" %>
+  </div>
+  <div class="mb-3">
+    <%= form.label :petitioner_name%>
+    <%= form.text_field :petitioner_name, class: "form-control" %>
+  </div>
+  <div class="mb-3">
+    <%= form.label :petitioner_advocate%>
+    <%= form.text_field :petitioner_advocate, class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :respondent_name%>
+    <%= form.text_field :respondent_name, class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :respondent_advocate%>
+    <%= form.text_field :respondent_advocate, class: "form-control"%>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :business_on_date %>
+    <%= form.date_select :business_on_date, class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :hearing_date %>
+    <%= form.date_select :hearing_date, class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :purpose_of_hearing %>
+    <%= form.text_field :purpose_of_hearing, class: "form-control" %>
+  </div>
+
+  <div class="form-group row justify-content-center">
+    <%= form.submit :save %>
+  </div>
+</div>
+<% end %>
