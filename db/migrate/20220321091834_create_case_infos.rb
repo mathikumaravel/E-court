@@ -1,8 +1,6 @@
 class CreateCaseInfos < ActiveRecord::Migration[6.1]
   def change
     create_table :case_infos do |t|
-      t.string :case_category
-      t.string :court_name
       t.string :judge_name
       t.string :registration_number
       t.string :case_stage

@@ -1,0 +1,21 @@
+<h1 class="text-center mt-4">Log in for user</h1>      
+<div class="wrapper">
+<div class="logo"> <img src="https://services.ecourts.gov.in/ecourtindia_v4_bilingual/images/ecourts-logo.png" alt=""> </div>
+    <div class="text-center mt-4 name"> E-COURTS </div>
+      
+      <%= form_with(scope: :session, url: login_path, local: true) do |f| %>
+       
+        <div class="p-3 mt-2">
+        <div  class="form-field d-flex align-items-center"> 
+        <%= f.email_field :email, placeholder: "Enter your email" %>
+      </div>
+          <div  class="form-field d-flex align-items-center"> 
+            <%= f.password_field :password, placeholder: "Enter Password" %>
+          </div>
+        </div>
+        <div>
+          <%= f.submit "Log in", class: "btn btn-outline-light btn-lg" %>
+        </div>
+      <% end %>
+    </div>
+    

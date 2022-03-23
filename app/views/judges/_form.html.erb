@@ -1,0 +1,22 @@
+<%= form_with(model: judge) do |form| %>
+  <% if judge.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(judge.errors.count, "error") %> prohibited this judge from being saved:</h2>
+
+      <ul>
+        <% judge.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :judge_name %>
+    <%= form.text_field :judge_name %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

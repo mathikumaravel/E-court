@@ -22,7 +22,7 @@ class CourtNamesController < ApplicationController
   # POST /court_names or /court_names.json
   def create
     @court_name = CourtName.new(court_name_params)
-
+  
     respond_to do |format|
       if @court_name.save
         format.html { redirect_to court_name_url(@court_name), notice: "Court name was successfully created." }

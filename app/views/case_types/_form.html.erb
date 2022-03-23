@@ -1,0 +1,22 @@
+<%= form_with(model: case_type) do |form| %>
+  <% if case_type.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(case_type.errors.count, "error") %> prohibited this case_type from being saved:</h2>
+
+      <ul>
+        <% case_type.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :type_of_case %>
+    <%= form.text_field :type_of_case %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type of case:</strong>
+  <%= @case_type.type_of_case %>
+</p>
+
+<%= link_to 'Edit', edit_case_type_path(@case_type) %> |
+<%= link_to 'Back', case_types_path %>

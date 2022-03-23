@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Court Names</h1>
+<h1  class="text-center">Court Names</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Court name</th>
@@ -13,7 +13,7 @@
   <tbody>
     <% @court_names.each do |court_name| %>
       <tr>
-        <td><%= court_name.Court_name %></td>
+        <td><%= court_name.court_name %></td>
         <td><%= link_to 'Show', court_name %></td>
         <td><%= link_to 'Edit', edit_court_name_path(court_name) %></td>
         <td><%= link_to 'Destroy', court_name, method: :delete, data: { confirm: 'Are you sure?' } %></td>

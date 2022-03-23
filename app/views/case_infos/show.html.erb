@@ -1,57 +1,66 @@
 <p id="notice"><%= notice %></p>
-<p>
-  <strong>Case category:</strong>
-  <%= @case_info.case_category %>
-</p>
-<p>
-  <strong>Court name:</strong>
-  <%=@case_info.court_name %>
-</p>
-<p>
-  <strong>Judge name:</strong>
-  <%= @case_info.judge_name  %>
-</p>
 
-<p>
-  <strong>Registration number:</strong>
-  <%= @case_info.registration_number %>
-</p>
-<p>
-  <strong>Case stage:</strong>
-  <%= @case_info.case_stage %>
-</p>
-<p>
-  <strong>Petitioner name:</strong>
-  <%= @case_info.petitioner_name %>
-</p>
+<div class="container">
+  
+    <div class="row justify-content-md-center">
+      <div class="col-8 mt-4">
+        <div class="card text-center shadow mb-5 bg-white rounded">
+          <div class="card-header font-italic">
+            
+             
+            </div>
+            <div class="card-body">
+            <div class="m-4">
+            <div class="row">
 
-<p>
-  <strong>Petitioner advocate:</strong>
-  <%= @case_info.petitioner_advocate %>
-</p>
+            <div class="col-sm-3">Case type</div>
+            <div class="col-sm-9"><%= @case_info.case_type.type_of_case %></div>
 
-<p>
-  <strong>Respondent name:</strong>
-  <%= @case_info.respondent_name %>
-</p>
+            <div class="col-sm-3">Case category</div>
+            <div class="col-sm-9"><%= @case_info.case_category.category %></div>
+   
+            <div class="col-sm-3">Registration number</div>
+            <div class="col-sm-9"><%= @case_info.registration_number %></div>
+            
+            <div class="col-sm-3">Case stage</div>
+            <div class="col-sm-9"><%= @case_info.case_stage %></div>
+            
+            <div class="col-sm-3">Petitioner name</div>
+            <div class="col-sm-9"><%= @case_info.petitioner_name %></div>
+            
+            <div class="col-sm-3">Petitioner advocate</div>
+            <div class="col-sm-9"><%= @case_info.petitioner_advocate %></div>
+            
+            <div class="col-sm-3">Respondent name</div>
+            <div class="col-sm-9"><%= @case_info.respondent_name %></div>
+            
+            <div class="col-sm-3">Respondent advocate</div>
+            <div class="col-sm-9"><%=  @case_info.respondent_advocate %></div>
+            
+            <div class="col-sm-3">Business on date</div>
+            <div class="col-sm-9"><%= @case_info.business_on_date %></div>
+            
+            <div class="col-sm-3">Hearing date</div>
+            <div class="col-sm-9"><%= @case_info.hearing_date %></div>
+            
+            <div class="col-sm-3">Purpose of hearing</div>
+            <div class="col-sm-9"><%= @case_info.purpose_of_hearing %></div>
+            
+            <div class="col-sm-3">Court name</div>
+            <div class="col-sm-9"><%= @case_info.court_name.court_name %></div>
 
-<p>
-  <strong>Respondent advocate:</strong>
-  <%= @case_info.respondent_advocate %>
-</p>
-<p>
-  <strong>Business on date:</strong>
-  <%= @case_info.business_on_date %>
-</p>
+            <div class="col-sm-3">Judge name</div>
+            <div class="col-sm-9"><%= @case_info.judge.judge_name %></div>
 
-<p>
-  <strong>Hearing date:</strong>
-  <%= @case_info.hearing_date %>
-</p>
-
-<p>
-  <strong>Purpose of hearing:</strong>
-  <%= @case_info.purpose_of_hearing %>
-</p>
-<%= link_to 'Edit', edit_case_info_path(@case_info) %> |
-<%= link_to 'Back', case_infos_path %>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer text-muted">   
+            <%= link_to 'Back', case_infos_path, class: "btn btn-outline-info" %>
+            <%= link_to "Edit", edit_case_info_path(@case_info), class: "btn btn-outline-info" %>
+            <%= link_to "Delete", case_info_path(@case_info), class: "btn btn-outline-danger", method: :delete, data: {confirm: "Are you sure?"} %>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>

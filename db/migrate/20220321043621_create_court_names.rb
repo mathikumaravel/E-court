@@ -4,6 +4,7 @@ class CreateCourtNames < ActiveRecord::Migration[6.1]
       t.string :court_name
 
       t.timestamps
+      
     end
   end
 end
